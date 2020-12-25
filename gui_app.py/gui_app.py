@@ -12,6 +12,8 @@ button2 = Button(topFrame, text = "Click", fg = "red", bg = "cyan")
 button2.pack(side = RIGHT)
 button3 = Button(topFrame, text = "Click", fg = "grey", bg = "cyan")
 button3.pack(side = BOTTOM)
+button4 = Button(topFrame, text = "Click", fg = "black", bg = "cyan")
+button4.pack(side = BOTTOM)
 
 label1 = Label(root, text = "Hello World", fg = "red")
 label1.pack()
