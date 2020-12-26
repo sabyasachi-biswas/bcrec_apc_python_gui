@@ -1,0 +1,1 @@
+https://python-tricks.com/checkbutton-in-tkinter/
