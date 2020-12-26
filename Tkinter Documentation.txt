@@ -1,1 +1,2 @@
 https://python-tricks.com/checkbutton-in-tkinter/
+https://medium.com/lifeandtech/executable-gui-with-python-fc79562a5558
