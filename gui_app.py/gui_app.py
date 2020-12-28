@@ -17,13 +17,14 @@ class NewClass:
             print("Message worked")
 
 
-def printName1(event):
-    #messagebox.showinfo("Click","Button1")
-    root.filename = filedialog.askopenfilename(initialdir = "/Images", title = "Select a File")
+def printName1():
+    messagebox.showinfo("Click","Button1")
+    
     #print("Button 1 was clicked")
 
-def printName2():
-    print("Button 2 was clicked")
+def printName2(event):
+    #print("Button 2 was clicked")
+    root.filename = filedialog.askopenfilename(initialdir = "/Images", title = "Select a File")
 
 def printName3(event):
     print("Button 3 was clicked")
@@ -42,8 +43,8 @@ root.geometry("400x400")
 # topFrame = Frame(root)
 # topFrame.pack()
 
-button1 = Button(root, text = "Click", fg = "green", bg = "cyan", command = printName2)
-#button1.bind("<Button-1>", printName1)
+button1 = Button(root, text = "Click", fg = "green", bg = "cyan", command = printName1)
+button1.bind("<Button-2>", printName2)
 button1.pack(anchor = CENTER)
 # button2 = Button(topFrame, text = "Click", fg = "red", bg = "cyan")
 # button2.pack(side = RIGHT)
