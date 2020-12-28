@@ -7,8 +7,8 @@ class NewClass:
         frame = Frame(master)
         frame.pack()
 
-        self.printButton = Button(frame, text = "Print Message", command = self.printMessage)
-        self.printButton.pack(side = LEFT)
+        printButton = Button(frame, text = "Print Message", command = self.printMessage)
+        printButton.pack(side = LEFT)
 
         self.quitButton = Button(frame, text = "Quit", command = frame.quit)
         self.quitButton.pack()
@@ -33,7 +33,8 @@ root = Tk()
 root.title("GUI app")
 root.geometry("400x400")
 
-#object1 = NewClass(root)
+object1 = NewClass(root)
+object1.quitButton.bind("<Button-2>", printName3)
 
 #root.filename = filedialog.askopenfilename(initialdir = "/Images", title = "Select a File")
 #canvas = Canvas(root, width = 450 , height = 500)
@@ -43,9 +44,12 @@ root.geometry("400x400")
 # topFrame = Frame(root)
 # topFrame.pack()
 
-button1 = Button(root, text = "Click", fg = "green", bg = "cyan", command = printName1)
-button1.bind("<Button-2>", printName2)
-button1.pack(anchor = CENTER)
+# button1 = Button(root, text = "Click", fg = "green", bg = "cyan", command = printName1)
+# button1.bind("<Button-2>", printName2)
+# button1.bind("<Button-3>", printName3)
+# button1.pack(anchor = CENTER)
+
+
 # button2 = Button(topFrame, text = "Click", fg = "red", bg = "cyan")
 # button2.pack(side = RIGHT)
 # button3 = Button(topFrame, text = "Click", fg = "grey", bg = "cyan")
