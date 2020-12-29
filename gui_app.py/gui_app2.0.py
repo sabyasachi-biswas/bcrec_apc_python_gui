@@ -43,5 +43,4 @@ class gui_app:
 
 
 obj1 = gui_app(app)
-print("hello world")
 app.mainloop()
