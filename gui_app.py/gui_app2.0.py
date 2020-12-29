@@ -9,15 +9,26 @@ class gui_app:
         frame1 = Frame(master)
         frame1.pack()
 
-        button1 = Button(app, text = "New window", command = self.new_window)
+        self.entry1 = Entry(master)
+        self.entry1.pack()
+
+        button1 = Button(app, text = "New window", command = self.button_click)
         button1.pack()
 
-    def new_window(self):
+    def button_click(self):
+        text = self.entry1.get()
+        self.new_window(text)
+
+    def new_window(self, string):
         new_window = Tk()
         new_window.title("New Window")
         new_window.geometry("200x200")
+
         button2 = Button(new_window, text = "Quit" , command = new_window.quit)
         button2.pack()
+        button3 = Button(new_window, text = "Print" , command = print(string))
+        button3.pack()
+
 
 
 
