@@ -31,7 +31,7 @@ class gui_app:
         new_window.title("New Window")
         new_window.geometry("200x200")
 
-        button2 = Button(new_window, text = "Quit" , command = new_window.quit)
+        button2 = Button(new_window, text = "Quit" , command = new_window.destroy)
         button2.pack()
         button3 = Button(new_window, text = "Print" , command = self.printfun(string))
         # button3.bind("<Button-1>,",self.printfun(string))
