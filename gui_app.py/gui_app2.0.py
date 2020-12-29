@@ -12,8 +12,15 @@ class gui_app:
         self.entry1 = Entry(master)
         self.entry1.pack()
 
-        button1 = Button(app, text = "New window", command = self.button_click)
-        button1.pack()
+        self.button1 = Button(app, text = "New window", command = self.button_click)
+        self.button1.pack()
+
+        button4 = Button(app, text = "Print" , command = self.button_print)
+        button4.pack()
+
+    def button_print(self):
+        text = self.entry1.get()
+        self.printfun(text)
 
     def button_click(self):
         text = self.entry1.get()
@@ -26,9 +33,12 @@ class gui_app:
 
         button2 = Button(new_window, text = "Quit" , command = new_window.quit)
         button2.pack()
-        button3 = Button(new_window, text = "Print" , command = print(string))
+        button3 = Button(new_window, text = "Print" , command = self.printfun(string))
+        # button3.bind("<Button-1>,",self.printfun(string))
         button3.pack()
 
+    def printfun(self,text):
+        print(text)
 
 
 
